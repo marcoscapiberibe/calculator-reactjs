@@ -1,9 +1,10 @@
 import React from "react";
+import './Calculator.css';
 
 export default function Calculator() {
     return (
         <div>
-            Testando componente Calculator
+            <button>1</button>
         </div>
     )
 }
