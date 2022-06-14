@@ -8,9 +8,15 @@ export default function Calculator() {
 
     function inputNumber(e) {
         let input = e.target.value;
-        setNumber(number + input);
+        if(number === 0) {
+            setNumber(input);
+        } else (setNumber(number + input));
+        
     }
 
+    function clear(e) {
+        setNumber(0);
+    }
 
     return (
         <>
@@ -18,7 +24,7 @@ export default function Calculator() {
         <Container maxWidth="xs">
         <div className="wrapper">
             <h1 className="result">{number}</h1>
-            <button className="color--two">AC</button>
+            <button className="color--two" onClick={clear}>AC</button>
             <button className="color--two">+/-</button>
             <button className="color--two">%</button>
             <button className="color--one">÷</button>
