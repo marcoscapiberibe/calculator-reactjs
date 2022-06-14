@@ -24,6 +24,13 @@ export default function Calculator() {
         setNumber(number / 100);
     }
 
+    function operatorHandler() {
+        if(number > 0) {
+            setNumber( - number)
+        } else {
+            setNumber(Math.abs(number));
+        }
+    }
 
     return (
         <>
@@ -32,7 +39,7 @@ export default function Calculator() {
         <div className="wrapper">
             <h1 className="result">{number}</h1>
             <button className="color--two" onClick={clear}>AC</button>
-            <button className="color--two">+/-</button>
+            <button className="color--two" onClick={operatorHandler}>+/-</button>
             <button className="color--two" onClick={porcent}>%</button>
             <button className="color--one">÷</button>
             <button className="color--three" onClick={inputNumber} value={7}>7</button>
@@ -48,7 +55,7 @@ export default function Calculator() {
             <button className="color--three" onClick={inputNumber} value={3}>3</button>
             <button className="color--one">+</button>
             <button className="color--three" onClick={inputNumber} value={0}>0</button>
-            <button className="color--two">,</button>
+            <button className="color--two" onClick={inputNumber} value={','}>,</button>
             <button className="color--two" style={{ visibility: 'hidden' }}>,</button>
             <button className="color--one">=</button>
         </div>
