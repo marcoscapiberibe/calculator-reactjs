@@ -42,6 +42,18 @@ export default function Calculator() {
         setNumber(0);
     }
 
+    function calculate() {
+        if(operator === '/') {
+            setNumber(parseFloat(oldNumber) / parseFloat(number));
+        } else if (operator === 'X') {
+            setNumber(parseFloat(oldNumber) * parseFloat(number));
+        } else if (operator === '-') {
+            setNumber(parseFloat(oldNumber) - parseFloat(number));
+        } else if (operator === '+') {
+            setNumber(parseFloat(oldNumber) + parseFloat(number));
+        }
+    }
+
     return (
         <>
         <Box  m={5}/>
@@ -67,7 +79,7 @@ export default function Calculator() {
             <button className="color--three" onClick={inputNumber} value={0}>0</button>
             <button className="color--two" onClick={inputNumber} value={','}>,</button>
             <button className="color--two" style={{ visibility: 'hidden' }}>,</button>
-            <button className="color--one">=</button>
+            <button className="color--one" onClick={calculate}>=</button>
         </div>
         </Container>
         </>
