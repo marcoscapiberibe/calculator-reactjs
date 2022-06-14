@@ -77,7 +77,7 @@ export default function Calculator() {
             <button className="color--three" onClick={inputNumber} value={3}>3</button>
             <button className="color--one" onClick={operatorHandler} value='+'>+</button>
             <button className="color--three" onClick={inputNumber} value={0}>0</button>
-            <button className="color--two" onClick={inputNumber} value={','}>,</button>
+            <button className="color--two" onClick={inputNumber} value={'.'}>,</button>
             <button className="color--two" style={{ visibility: 'hidden' }}>,</button>
             <button className="color--one" onClick={calculate}>=</button>
         </div>
