@@ -10,13 +10,20 @@ export default function Calculator() {
         let input = e.target.value;
         if(number === 0) {
             setNumber(input);
-        } else (setNumber(number + input));
+        } else {
+            setNumber(number + input);
+        }
         
-    }
+    };
 
     function clear(e) {
         setNumber(0);
     }
+
+    function porcent() {
+        setNumber(number / 100);
+    }
+
 
     return (
         <>
@@ -26,7 +33,7 @@ export default function Calculator() {
             <h1 className="result">{number}</h1>
             <button className="color--two" onClick={clear}>AC</button>
             <button className="color--two">+/-</button>
-            <button className="color--two">%</button>
+            <button className="color--two" onClick={porcent}>%</button>
             <button className="color--one">÷</button>
             <button className="color--three" onClick={inputNumber} value={7}>7</button>
             <button className="color--three" onClick={inputNumber} value={8}>8</button>
