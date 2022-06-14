@@ -5,6 +5,9 @@ import Container from '@mui/material/Container';
 
 export default function Calculator() {
     const [number, setNumber] = useState(0);
+    const [oldNumber, setOldNumber] = useState(0);
+    const [operator, setOperator] = useState(0);
+
 
     function inputNumber(e) {
         let input = e.target.value;
@@ -24,7 +27,7 @@ export default function Calculator() {
         setNumber(number / 100);
     }
 
-    function operatorHandler() {
+    function changeSign() {
         if(number > 0) {
             setNumber( - number)
         } else {
@@ -39,7 +42,7 @@ export default function Calculator() {
         <div className="wrapper">
             <h1 className="result">{number}</h1>
             <button className="color--two" onClick={clear}>AC</button>
-            <button className="color--two" onClick={operatorHandler}>+/-</button>
+            <button className="color--two" onClick={changeSign}>+/-</button>
             <button className="color--two" onClick={porcent}>%</button>
             <button className="color--one">÷</button>
             <button className="color--three" onClick={inputNumber} value={7}>7</button>
