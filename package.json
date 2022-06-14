@@ -39,12 +39,6 @@
       "last 1 safari version"
     ]
     
-  },
-  "engines": {
-    "node": "^>=0.10.0"
-  },
-  "engines": {
-    "npm": "^8.x"
   }
-  
+
 }
