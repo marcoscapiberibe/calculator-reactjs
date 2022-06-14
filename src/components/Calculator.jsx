@@ -8,7 +8,7 @@ export default function Calculator() {
 
     function inputNumber(e) {
         let input = e.target.value;
-        setNumber(input);
+        setNumber(number + input);
     }
 
 
@@ -34,10 +34,10 @@ export default function Calculator() {
             <button className="color--three" onClick={inputNumber} value={2}>2</button>
             <button className="color--three" onClick={inputNumber} value={3}>3</button>
             <button className="color--one">+</button>
-            <button className="color--three">0</button>
+            <button className="color--three" onClick={inputNumber} value={0}>0</button>
             <button className="color--two">,</button>
             <button className="color--two" style={{ visibility: 'hidden' }}>,</button>
-            <button className="color--two">=</button>
+            <button className="color--one">=</button>
         </div>
         </Container>
         </>
