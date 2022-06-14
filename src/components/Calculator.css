@@ -12,7 +12,22 @@ button:hover {
 }
 
 .wrapper {
-    background-color: black;
+    background-color: #2b2a47;
     border-radius: 1em;
     padding: 1em;
+}
+
+.color--one {
+    background-color: #5E7691;
+    color: #E6E3D3;
+}
+
+.color--two {
+    background-color: #C1BEB7;
+    color: #4B497A;
+}
+
+.color--three {
+    background-color: #C1BEB7;
+    color: #516780;
 }

@@ -6,28 +6,29 @@ import Container from '@mui/material/Container';
 export default function Calculator() {
     return (
         <>
-        <Box m={5}/>
+        <Box  m={5}/>
         <Container maxWidth="xs">
         <div className="wrapper">
-            <button>AC</button>
-            <button>+/-</button>
-            <button>%</button>
+            <button className="color--two">AC</button>
+            <button className="color--two">+/-</button>
+            <button className="color--two">%</button>
             <button className="color--one">÷</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
+            <button className="color--three">7</button>
+            <button className="color--three">8</button>
+            <button className="color--three">9</button>
             <button className="color--one">X</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
+            <button className="color--three">4</button>
+            <button className="color--three">5</button>
+            <button className="color--three">6</button>
             <button className="color--one">-</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
+            <button className="color--three">1</button>
+            <button className="color--three">2</button>
+            <button className="color--three">3</button>
             <button className="color--one">+</button>
-            <button>0</button>
-            <button>,</button>
-            <button>=</button>
+            <button className="color--three">0</button>
+            <button className="color--two">,</button>
+            <button className="color--two" style={{ visibility: 'hidden' }}>,</button>
+            <button className="color--two">=</button>
         </div>
         </Container>
         </>
